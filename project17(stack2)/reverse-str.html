@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse string</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function reverse(str)
+    {
+        let stack = []
+        let rev = ""
+    
+
+    for(let i=0; i<str.length; i++)
+    {
+        stack.push(str[i])
+    }
+
+    for(let i=0; i<str.length; i++)
+    {
+        rev += stack.pop()
+    }
+
+    return rev
+}
+
+    let str = "123456789"
+    let strpro = "KRISHNA"
+    console.log(reverse(str))
+    console.log(reverse(strpro))
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta valueset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   
+   function Balanced(str){
+        let stack = [];
+
+        for(i=0; i<str.length; i++)
+        {
+            let value = str[i]
+
+            if(value == "(" || value == "{" || value == "[")
+            {
+                stack.push(value)
+            }
+            else
+            {
+                if(str.length === 0)
+                {
+                    return false
+                }
+                const store = stack.pop()
+                if((value === ")" && store != "(") || (value === "]" && store != "[") || (value === "}" && store != "{"))
+                {
+                    return false
+                }
+            }
+        }
+        return stack.length === 0
+    }
+
+
+    let expression = "{[()]}"
+    console.log(Balanced(expression))
+</script>

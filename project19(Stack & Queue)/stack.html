@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// push-pop-empty-size 
+    class opreation{
+       constructor(){
+        this.stack = []
+       }
+       push(element){
+        this.stack.push(element)
+       }
+       pop(){
+        if(this.stack.length === 0){
+            return "Stack is Empty"
+        }
+        else{
+            this.stack.pop()
+        }
+       }
+       empty(){
+       return this.stack.length === 0
+       }
+       size(){
+        return this.stack.length
+       }
+    }
+
+    let stack = new opreation
+    stack.push(10)
+    stack.push(20)
+    stack.push(30)
+    stack.push(40)
+    stack.push(50)
+
+    stack.pop()
+
+    console.log(stack)
+
+    console.log(stack.empty())
+    console.log(stack.size())
+</script>

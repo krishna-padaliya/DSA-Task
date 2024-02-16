@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+function BS(array,target){
+    let start=0
+    let end=array.length-1
+
+    while(start <= end){
+        let mid=Math.floor((start + end)/2)
+
+        if(array[mid] === target){
+            return mid
+        }
+
+        if(array[start]<=array[mid]){
+            if(array[start]<=target && target<=array[mid]){
+                end=mid-1
+            }
+            else{
+                start=mid+1
+            }
+        }
+        else{
+            if(array[mid]<target && target<=array[end]){
+                start=mid+1
+            }
+            else{
+                end=mid-1
+            }
+        }
+    }
+    return -1
+}
+
+
+    let array = [50 , 60 , 90 , 100 , 20 , 30 , 40]
+    target = 90
+
+    let index = BS(array,target)
+   if(index != -1){
+    console.log(`Answer at Index Number ${index}`)
+   }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maximum</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function maxi(arr) {
+        let max = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max)
+                max = arr[i]
+        }
+        return max
+    }
+    let arr = [20, 30, 40, 50, 60]
+    let res = maxi(arr)
+    if (res) {
+        console.log(`Maximum Number is: ${res}`)
+    } else {
+        console.log(`maximum  is Not Found ${res}`)
+    }
+</script>

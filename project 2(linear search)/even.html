@@ -1,0 +1,45 @@
+<!-- Question 5: Find Number of Even Digits in a 1D Array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+function count(arr, arr_size) 
+{ 
+	let even_count = 0; 
+	let odd_count = 0; 
+
+	for (let i = 0; i < arr_size; i++) { 
+		
+		
+		if (arr[i] & 1 == 1) 
+			odd_count++; 
+		else
+			even_count++; 
+	} 
+    console.log(`Even Number is: ${even_count}`)
+    console.log(`Odd Number is: ${odd_count}`)
+
+	// document.write("Number of even elements = " + even_count 
+	// 	+ "<br>" + "Number of odd elements = " + odd_count); 
+} 
+
+
+
+	let arr = [ 2, 3, 4, 5, 6 ]; 
+	let n = arr.length; 
+	count(arr, n); 
+
+
+
+
+</script>

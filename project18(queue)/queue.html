@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queue</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    class Queue {
+        constructor() {
+            this.Queue = []
+        }
+        Enqueue(element) {
+            this.Queue.push(element)
+        }
+        Dequeue() {
+            if (this.Queue.length === 0) {
+                return "Queue is empty"
+            }
+            else {
+                return this.Queue.shift()
+            }
+        }
+        Size(){
+            return this.Queue.length
+        }
+        Empty(){
+            return this.Queue.length === 0
+        }
+        Fornt(){
+            if(this.Queue.length === 0){
+                return "Queue is Empty"
+            }
+            else{
+                return this.Queue[0]
+            }
+        }
+    }
+
+    let QueueElement = new Queue
+    QueueElement.Enqueue(10)
+    QueueElement.Enqueue(20)
+    QueueElement.Enqueue(30)
+    QueueElement.Enqueue(40)
+    QueueElement.Enqueue(50)
+
+    QueueElement.Dequeue()
+
+    console.log(QueueElement)
+    console.log(QueueElement.Size())
+    console.log(QueueElement.Empty())
+    console.log(QueueElement.Fornt())
+
+</script>

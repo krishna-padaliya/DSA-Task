@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLINDROM</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function link(value)
+    {
+        this.value=value
+        this.next=null
+    }
+    const link1=new link(90)
+    const link2=new link(60)
+    const link3=new link(30)
+    const link4=new link(60)
+    const link5=new link(90)
+
+    link1.next=link2
+    link2.next=link3
+    link3.next=link4
+    link4.next=link5
+
+    function palindrom(head)
+    {
+        let curr=head
+        let values=[]
+
+        while(curr != null)
+        {
+            values.push(curr.value)
+            curr=curr.next
+        }
+        return values.join('') === values.reverse().join('');
+    }
+    console.log(palindrom(link1))
+
+</script>

@@ -1,0 +1,39 @@
+<!-- Question 2: Find Targeted Character in a String Using Linear Search -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traget ch</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+   
+
+    let arr = "KRISHNA PADALIIYA"
+    let target = "A"
+
+    
+
+    function linear(arr, target) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                target=arr[i]
+            }
+        }
+        return i;
+    }
+
+    let res = linear(arr, target)
+    if(res){
+        console.log(`Index is Found ${res}`) 
+    }
+    else{
+        console.log(`Index is Not Found ${res}`)
+    }

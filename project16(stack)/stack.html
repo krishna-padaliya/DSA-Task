@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Stack{
+        constructor(){                                                                                  AbortController
+          this.stack = []
+        }
+        push(element){
+         this.stack.push(element)
+        }
+        pop(){
+            if(this.stack===0){
+                return "empty"
+            }
+            else{
+                return this.stack.pop()
+            }
+        }
+        peek(){
+            if(this.stack===0){
+                return "empty"
+            }
+            else{
+                return this.stack[this.stack.length-1]
+            }
+        }
+        isEmpty(){
+            return this.stack.length==0
+        }
+        size(){
+            return this.stack.length
+        }
+    }
+    let stack = new Stack
+    stack.push(30)
+    stack.push(20)
+    stack.push(40)
+    stack.push(50)
+    stack.push(10)
+
+    stack.pop()
+
+console.log(stack)
+
+console.log(stack.peek())
+
+console.log(stack.isEmpty())
+
+console.log(stack.size())
+
+
+</script>

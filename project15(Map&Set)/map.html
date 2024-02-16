@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// MAP => set,delete,has,forEach,clear
+
+ let map = new Map([["The India Story","Author-Bimal Jalal"],
+                    ["A Place Called Home","Author-Preeti Shenoy"]])
+
+map.set("Listen to Your Heart: The London Adventure","Author-Ruskin Bond")
+
+map.delete("Listen to Your Heart: The London Adventure")
+
+// map.clear()
+
+console.log(map)
+
+console.log(map.has("Listen to Your Heart: The London Adventure"))
+
+map.forEach((key,value)=>{
+    console.log(key,value)
+})
+</script>

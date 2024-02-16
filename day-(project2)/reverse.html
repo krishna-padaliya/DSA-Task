@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function link(value){
+       this.value = value
+       this.next = null
+   }
+
+   let link1 = new link(10)
+   let link2 = new link(20)
+   let link3 = new link(30)
+   let link4 = new link(40)
+   let link5 = new link(50)
+
+   link1.next = link2
+   link2.next = link3
+   link3.next = link4
+   link4.next = link5
+
+   function rev(head){
+       let prev = null
+       let Current = head
+       while(Current != null){
+           let newlink = Current.next
+           Current.next = prev
+           prev = Current
+           Current = newlink
+       }
+       return prev
+   }
+
+   let reversed = rev(link1)
+
+   let Current = reversed
+   while(Current != null){
+       console.log(Current.value)
+       Current = Current.next
+   }
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr=[10,50,30,40,-20]
+    let  max1=0
+    let max2=0
+
+    for(let i=0; i<arr.length; i++)
+    {
+        max1=Math.max(0,max1+arr[i])
+        max2=Math.max(max1,max2)
+    }
+    console.log(" sum of maximum subarray:",max2)
+</script>

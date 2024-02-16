@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta valueset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Balanced</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function blance(str){
+        let stack = [];
+
+        for(i=0; i<str.length; i++)
+        {
+            let value = str[i]
+
+            if(value == "(" || value == "{" || value == "[")
+            {
+                stack.push(value)
+            }
+            else
+            {
+                if(str.length === 0)
+                {
+                    return false
+                }
+                const store = stack.pop()
+                if((value === ")" && store != "(") || (value === "]" && store != "[") || (value === "}" && store != "{"))
+                {
+                    return false
+                }
+            }
+        }
+        return stack.length === 0
+    }
+
+    let exp = "[()]{}{[()()]()}"
+    let expnot = "[(])"
+    console.log(blance(exp))
+    console.log(blance(expnot))
+
+</script>

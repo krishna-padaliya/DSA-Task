@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singly Link List</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function link(value)
+    {
+        this.value=value
+        this.next=null
+    }
+
+    const link1 = new link("K")
+    const link2 = new link("R")
+    const link3 = new link("I")
+    const link4 = new link("S")
+    const link5 = new link("H")
+    const link6 = new link("N")
+    const link7 = new link("A")
+
+    link1.next=link2
+    link2.next=link3
+    link3.next=link4
+    link4.next=link5
+    link5.next=link6
+    link6.next-link7
+    
+    let name=link1
+    while(name!=null)
+    {
+        console.log(name.value)
+        name=name.next
+    }
+</script>

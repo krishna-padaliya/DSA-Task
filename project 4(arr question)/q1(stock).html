@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-1</title>
+</head>
+<body>
+   
+</body>
+</html>
+<script>
+    let StockPrice=[5,30,50,20,2,100]
+    let minprice=Number.MAX_VALUE//100
+    let maxprofit=0
+    for(let i=0; i<StockPrice.length; i++)
+    {
+        if(StockPrice[i]<minprice)
+        {
+            minprice=StockPrice[i]
+        }
+        else if(StockPrice[i]-minprice>maxprofit)
+        {
+             maxprofit=StockPrice[i]-minprice
+        }
+    }
+    console.log(maxprofit)
+</script>

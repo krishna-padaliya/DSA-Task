@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-4</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let sum=[10,20,50,80]
+    let target=100;
+    function AddNum(sum,target)
+    {
+        for(let i=0; i<sum.length; i++)
+        {
+            for(let j=i+1; j<sum.length; j++)
+            {
+                if(sum[i]+sum[j]==target)
+                {
+                    let ans=[i,j]
+                    return ans;
+                }
+            }
+        }
+    }
+    console.log(AddNum(sum,target))
+</script>

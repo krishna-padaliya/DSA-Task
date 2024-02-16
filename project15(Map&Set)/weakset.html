@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEAKSET</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// WeakSet => add,delete,has
+
+    let WS = new WeakSet()
+
+    let ob1 = {"Name":"Krishna"}
+    let ob2 = {"Name":"Radha"}
+    WS.add(ob1)
+    WS.add(ob2)
+
+    WS.delete(ob2)
+
+    console.log(WS)
+
+    console.log(WS.has(ob1))
+</script>

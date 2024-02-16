@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-3</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     function link(value)
+    {
+        this.value=value
+        this.next=null
+    }
+
+    const link1=new link("A")
+    const link2=new link("B")
+    const link3=new link("C")
+    const link4=new link("D")
+
+    link1.next=link2
+    link2.next=link3
+    link3.next=link4
+    
+
+    const newlink1=new link("E")
+    link4.next=newlink1
+
+    link1.next=link2.next
+
+    let curr=link1
+
+    while(curr != null)
+    {
+        console.log(curr.value)
+        curr= curr.next
+    }
+</script>

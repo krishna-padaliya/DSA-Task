@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr=[10,20,30,40,50]
+    let start=0
+    let end=arr.length
+
+    while(start < end)
+    {
+       let temp=arr[start]
+       arr[start]=arr[end]
+       arr[end]=temp
+       start++
+       end--
+    }
+    console.log(arr)
+</script>

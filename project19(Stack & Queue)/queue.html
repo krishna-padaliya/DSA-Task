@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // enqueue , dequeue , size , isEmpty
+    class opreation{
+        constructor(){
+            this.queue = []
+        }
+        enqueue(element){
+           this.queue.push(element)
+        }
+        dequeue(){
+            if(this.queue.length === 0)
+            {
+                return "Queue is Empty"
+            }
+            else{
+                return this.queue.pop()
+            }
+        }
+        isEmpty(){
+          return  this.queue.length === 0
+        }
+        size(){
+            return this.queue.length
+        }
+    }
+
+    let queue = new opreation
+    queue.enqueue(10)
+    queue.enqueue(20)
+    queue.enqueue(30)
+    queue.enqueue(40)
+    queue.enqueue(50)
+
+    queue.dequeue()
+
+    console.log(queue)
+
+    console.log(queue.isEmpty())
+
+    console.log(queue.size())
+</script>

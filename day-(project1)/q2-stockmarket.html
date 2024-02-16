@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let price=[20,5,40,80,6]
+    let minvalue=Number.MAX_VALUE
+    let maxprofit=0
+    for(let i=0; i<price.length; i++)
+    {
+        if(price[i]<minvalue)
+        {
+            minvalue=price[i]
+        }
+        else if(price[i]-minvalue>maxprofit)
+        {
+            maxprofit=price[i]-minvalue
+        }
+    }
+    console.log(maxprofit)
+</script>

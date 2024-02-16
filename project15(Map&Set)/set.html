@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+// Set => add,delete,has,forEach,clear
+
+ let array = [10,20,30,40,50,{"Name":"Krishna"}]
+ let set = new Set(array)
+
+ set.add({"Name":"Radha"})
+
+ set.delete(50)
+
+//  set.clear()
+
+ console.log(set)
+
+ console.log(set.has(20))
+
+ set.forEach((el)=>{
+    console.log(el)
+ })
+</script>

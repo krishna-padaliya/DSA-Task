@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASENDING</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  let recursion = function (arr, target, start, end) {
+    if (start > end) {
+      return false
+    }
+    let mid = Math.floor((start + end) / 2)
+    if (arr[mid] === target) {
+      return true
+    }
+
+    if (arr[mid] > target) {
+      return recursion(arr, target, start, mid - 1)
+    }
+    else {
+      return recursion(arr, target, mid + 1, end)
+    }
+  }
+  let arr = [1, 2, 3, 4, 5, 6]
+  let target = 3
+  if (recursion(arr, target, 0, arr.length - 1)) {
+    console.log("Lucky Number Founded")
+  }
+  else {
+    console.log("Lucky Number Not Founded")
+  }
+</script>
